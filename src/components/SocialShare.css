@@ -1,0 +1,14 @@
+.social-share {
+  display: flex;
+  gap: 15px;
+  margin: 20px 0;
+}
+
+.social-share button {
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.social-share button:hover {
+  transform: scale(1.1);
+} 

@@ -1,0 +1,68 @@
+.contact {
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+/* 暗黑模式 */
+.dark .contact {
+  background-color: #2d2d2d;
+  color: #fff;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+.contact-info {
+  margin: 20px 0;
+  padding: 15px;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* 暗黑模式 */
+.dark .contact-info {
+  background-color: #333;
+  color: #fff;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.3);
+}
+
+.social-media {
+  margin: 20px 0;
+}
+
+.social-media a {
+  display: flex;
+  align-items: center;
+  margin-right: 15px;
+  color: #333;
+  text-decoration: none;
+}
+
+/* 暗黑模式 */
+.dark .social-media a {
+  color: #fff;
+}
+
+.social-media i {
+  margin-right: 5px;
+}
+
+.social-media a:hover {
+  color: #007bff;
+}
+
+/* 暗黑模式 */
+.dark .social-media a:hover {
+  color: #66b0ff;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+form label {
+  margin-bottom: 10px;
+} 

@@ -1,0 +1,46 @@
+.layout {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #e0f7fa, #80deea);
+  transition: all 0.3s ease;
+}
+
+.layout.dark {
+  background: linear-gradient(135deg, #263238, #37474f);
+  color: #ffffff;
+}
+
+.theme-toggle-btn {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  padding: 10px;
+  border-radius: 50%;
+  background: #ffffff;
+  color: #007bff;
+  border: 2px solid #007bff;
+  cursor: pointer;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  z-index: 1000;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.theme-toggle-btn:hover {
+  background: rgba(0, 123, 255, 0.1);
+  color: #0056b3;
+}
+
+/* 暗黑模式下的按钮样式 */
+.dark .theme-toggle-btn {
+  background: #333;
+  color: #ffd700;
+  border-color: #ffd700;
+}
+
+.dark .theme-toggle-btn:hover {
+  background: rgba(255, 221, 0, 0.1);
+}

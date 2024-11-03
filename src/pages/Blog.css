@@ -1,0 +1,207 @@
+.blog-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  background: transparent;
+}
+
+/* 暗黑模式样式 */
+.dark .blog-container {
+  color: #fff;
+}
+
+.blog-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.search-bar input {
+  color: #000;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  padding: 10px;
+  border-radius: 4px;
+  width: 100%;
+  margin-bottom: 16px;
+}
+
+/* 暗黑模式搜索框 */
+.dark .search-bar input {
+  color: #fff;
+  background-color: #333;
+  border: 1px solid #555;
+}
+
+.search-bar input:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+.dark .search-bar input:focus {
+  border-color: #0056b3;
+}
+
+.tags-container {
+  margin-bottom: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.tag {
+  padding: 5px 15px;
+  background-color: #f0f0f0;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+/* 暗黑模式标签 */
+.dark .tag {
+  background-color: #333;
+  color: #fff;
+}
+
+.tag.active {
+  background-color: #007bff;
+  color: white;
+}
+
+.blog-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 30px;
+  margin-bottom: 30px;
+}
+
+.blog-card {
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+/* 暗黑模式卡片 */
+.dark .blog-card {
+  background: #2d2d2d;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+.blog-card:hover {
+  transform: translateY(-5px);
+}
+
+.blog-card-content {
+  padding: 20px;
+}
+
+.blog-card h2 {
+  margin: 0 0 10px 0;
+  font-size: 1.5rem;
+  color: #333;
+}
+
+/* 暗黑模式标题 */
+.dark .blog-card h2 {
+  color: #fff;
+}
+
+.date {
+  color: #666;
+  font-size: 0.9rem;
+  margin-bottom: 10px;
+}
+
+/* 暗黑模式日期 */
+.dark .date {
+  color: #aaa;
+}
+
+.summary {
+  color: #555;
+  margin-bottom: 15px;
+  line-height: 1.5;
+}
+
+/* 暗黑模式摘要 */
+.dark .summary {
+  color: #bbb;
+}
+
+.read-more {
+  display: inline-block;
+  padding: 8px 15px;
+  background-color: #007bff;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.read-more:hover {
+  background-color: #0056b3;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 30px;
+}
+
+.page-number {
+  padding: 8px 15px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+/* 暗黑模式分页 */
+.dark .page-number {
+  background: #333;
+  border-color: #444;
+  color: #fff;
+}
+
+.page-number.active {
+  background-color: #007bff;
+  color: white;
+  border-color: #007bff;
+}
+
+.page-number:hover:not(.active) {
+  background-color: #f0f0f0;
+}
+
+/* 暗黑模式分页悬停 */
+.dark .page-number:hover:not(.active) {
+  background-color: #444;
+}
+
+/* 主题切换按钮 */
+.theme-toggle {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  padding: 10px;
+  border-radius: 50%;
+  background: #007bff;
+  color: white;
+  border: none;
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.theme-toggle:hover {
+  background: #0056b3;
+} 
