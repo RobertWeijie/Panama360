@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { useTheme } from '../contexts/ThemeContext';
 import './Blog.css';
@@ -11,15 +11,17 @@ const blogPosts = [
     summary: 'Fortalecer la idea del Hecho en Panamá e integrar en ella el concepto de empresas de alta tecnología',
     tags: ['AI', 'Manufacturas', 'Economia'],
     date: '2024-10-04'
+
   },
-  /*
+  
   {
     id: 2,
-    title: '区块链技术与金融创新',
-    summary: '区块链技术正在重塑金融行业，带来前所未有的创新和机遇...',
-    tags: ['区块链', '金融科技', '创新'],
-    date: '2024-03-14'
+    title: 'Finanza verde: Conectando la protección ambiental con el desarrollo sostenible',
+    summary: 'cuando se aborda el desarrollo sostenible y la protección ambiental en Panamá, no se puede pasar por alto el papel crucial de las finanzas verdes',
+    tags: ['Ambiente', 'Finanza Verde'],
+    date: '2024-10-11'
   },
+  /*
   {
     id: 3,
     title: '5G技术的商业应用',
@@ -31,7 +33,7 @@ const blogPosts = [
     id: 4,
     title: '云计算与数字化转型',
     summary: '企业数字化转型中，云计算扮演着越来越重要的角色...',
-    tags: ['云计算', '数字化转型', '企业科技'],
+    tags: ['云计算', '数字化转', '企业科技'],
     date: '2024-03-12'
   },
   {
@@ -62,13 +64,16 @@ function Blog() {
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedTag, setSelectedTag] = useState('');
   const [currentPage, setCurrentPage] = useState(1);
+  const [posts, setPosts] = useState(() => {
+    return [...blogPosts].sort((a, b) => new Date(b.date) - new Date(a.date));
+  });
   const postsPerPage = 6;
 
   // 获取所有唯一的标签
-  const allTags = [...new Set(blogPosts.flatMap(post => post.tags))];
+  const allTags = [...new Set(posts.flatMap(post => post.tags))];
 
   // 过滤文章
-  const filteredPosts = blogPosts.filter(post => {
+  const filteredPosts = posts.filter(post => {
     const matchesSearch = post.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          post.summary.toLowerCase().includes(searchTerm.toLowerCase());
     const matchesTag = selectedTag === '' || post.tags.includes(selectedTag);
@@ -80,6 +85,26 @@ function Blog() {
   const indexOfFirstPost = indexOfLastPost - postsPerPage;
   const currentPosts = filteredPosts.slice(indexOfFirstPost, indexOfLastPost);
   const totalPages = Math.ceil(filteredPosts.length / postsPerPage);
+
+  useEffect(() => {
+    const fetchPosts = async () => {
+      try {
+        const response = await fetch('/api/posts');
+        const data = await response.json();
+        
+        // 对文章按照日期排序,最新的在前面
+        const sortedPosts = data.sort((a, b) => {
+          return new Date(b.date) - new Date(a.date);
+        });
+        
+        setPosts(sortedPosts);
+      } catch (error) {
+        console.error('获取博客文章失败:', error);
+      }
+    };
+
+    fetchPosts();
+  }, []);
 
   return (
     <div className={`blog-container ${isDarkMode ? 'dark' : ''}`}>
