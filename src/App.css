@@ -211,9 +211,9 @@ body::before {
 .dark-mode .card,
 .dark-mode .about-content,
 .dark-mode .glass-effect {
-  background: rgba(32, 33, 36, 0.95);
-  border: 1px solid rgba(255, 255, 255, 0.15);
-  color: #ffffff;
+  background: rgba(70, 71, 73, 0.95);
+  border: 1px solid rgba(227, 13, 13, 0.894);
+  color: #cf0808;
 }
 
 /* 暗黑模式下的标题颜色 */
@@ -225,7 +225,7 @@ body::before {
 .dark-mode h6,
 .dark-mode .about-title {
   color: #ffffff;
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  text-shadow: 0 2px 4px rgba(8, 248, 172, 0.95);
 }
 
 /* 暗黑模式下的文本颜色 */

@@ -9,22 +9,25 @@ import BlogDetail from './pages/BlogDetail';
 import { ThemeProvider } from './contexts/ThemeContext';
 import Navbar from './components/Navbar';
 import ScrollToTopButton from './components/ScrollToTopButton';
+import Layout from './components/Layout';
 import './App.css';
 
 function App() {
   return (
     <ThemeProvider>
       <Router>
-        <Navbar />
-        <Switch>
-          <Route exact path="/" component={Home} />
-          <Route path="/weekly-video" component={WeeklyVideo} />
-          <Route exact path="/blog" component={Blog} />
-          <Route path="/blog/:id" component={BlogDetail} />
-          <Route path="/contact" component={Contact} />
-          <Route path="/about" component={About} />
-        </Switch>
-        <ScrollToTopButton />
+        <Layout>
+          <Navbar />
+          <Switch>
+            <Route exact path="/" component={Home} />
+            <Route path="/weekly-video" component={WeeklyVideo} />
+            <Route exact path="/blog" component={Blog} />
+            <Route path="/blog/:id" component={BlogDetail} />
+            <Route path="/contact" component={Contact} />
+            <Route path="/about" component={About} />
+          </Switch>
+          <ScrollToTopButton />
+        </Layout>
       </Router>
     </ThemeProvider>
   );

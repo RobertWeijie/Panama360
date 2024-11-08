@@ -1,0 +1,80 @@
+/* 基础亮色模式样式 */
+.layout {
+  min-height: 100vh;
+  color: #333;
+  background-color: #ffffff;
+}
+
+.main-content {
+  padding: 20px;
+  min-height: calc(100vh - 160px); /* 减去导航栏和页脚的高度 */
+}
+
+/* 暗色模式样式 */
+@media (prefers-color-scheme: dark) {
+  .layout {
+    background-color: #1a1a1a;
+    color: #ffffff;
+  }
+
+  /* 标题样式 */
+  h1, h2, h3, h4, h5, h6 {
+    color: #ffffff;
+  }
+
+  /* 段落文本 */
+  p {
+    color: #e1e1e1;
+  }
+
+  /* 链接样式 */
+  a {
+    color: #66b3ff;
+  }
+
+  a:hover {
+    color: #99ccff;
+  }
+
+  /* 卡片或容器背景 */
+  .card, 
+  .container, 
+  .section {
+    background-color: #2d2d2d;
+    border-color: #404040;
+  }
+}
+
+/* 如果使用自定义暗黑模式切换 */
+[data-theme='dark'] .layout {
+  background-color: #1a1a1a;
+  color: #ffffff;
+}
+
+[data-theme='dark'] h1,
+[data-theme='dark'] h2,
+[data-theme='dark'] h3,
+[data-theme='dark'] h4,
+[data-theme='dark'] h5,
+[data-theme='dark'] h6 {
+  color: #ffffff;
+}
+
+[data-theme='dark'] p {
+  color: #e1e1e1;
+}
+
+[data-theme='dark'] a {
+  color: #66b3ff;
+}
+
+[data-theme='dark'] a:hover {
+  color: #99ccff;
+}
+
+[data-theme='dark'] .card,
+[data-theme='dark'] .container,
+[data-theme='dark'] .section {
+  background-color: #2d2d2d;
+  border-color: #404040;
+} 

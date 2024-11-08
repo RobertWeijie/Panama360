@@ -108,4 +108,42 @@
   .contact-item {
     margin: 1rem 0;
   }
+}
+
+/* 添加暗黑模式的样式 */
+@media (prefers-color-scheme: dark) {
+  .contact-container {
+    color: #e1e1e1;
+    background-color: #1a1a1a;
+  }
+
+  .contact-item {
+    background-color: #2d2d2d;
+    border: 1px solid #404040;
+  }
+
+  .contact-item h3 {
+    color: #ffffff;
+  }
+
+  .contact-item p {
+    color: #cccccc;
+  }
+
+  .social-media h2 {
+    color: #ffffff;
+  }
+
+  .social-icon {
+    color: #e1e1e1;
+  }
+
+  .social-icon:hover {
+    color: #ffffff;
+    transform: scale(1.1);
+  }
+}
+
+[data-theme='dark'] .contact-container {
+  /* 使用上面相同的样式 */
 } 

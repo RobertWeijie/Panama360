@@ -22,10 +22,10 @@ function Home() {
         </Link>
         <Link to="/contact" className="card">
           <h2 className="text-2xl mb-4">Contáctenos</h2>
-          <p className="mb-4">Si tiene alguna pregunta, no dude en contactarnos, estaremos encantados de atenderle</p>
+          <p className="mb-4">Si tiene duda y desea contribuir con sus ideas y ser entrevistado por nosotros,puede contactarnos en cualquier momento🔥</p>
         </Link>
         <Link to="/about" className="card">
-          <h2 className="text-2xl mb-4">Sobre nosotros</h2>
+          <h2 className="text-2xl mb-4">Sobre nosotros 😂</h2>
           <p className="mb-4"></p>
         </Link>
       </div>
@@ -33,7 +33,7 @@ function Home() {
         {isDarkMode ? 'Cambiar al modo brillante' : 'Cambiar al modo oscuro'}
       </button>
       
-      <ScrollToTopButton />
+      <ScrollToTopButton /> 
     </div>
   );
 }

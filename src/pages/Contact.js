@@ -1,5 +1,5 @@
 import React from 'react';
-import { FaWeixin, FaWeibo, FaInstagram, FaYoutube } from 'react-icons/fa';
+import { FaWeixin, FaWeibo, FaInstagram, FaYoutube, FaTwitter } from 'react-icons/fa';
 import '../styles/Contact.css';
 
 const Contact = () => {
@@ -11,13 +11,13 @@ const Contact = () => {
         <div className="contact-item">
           <i className="fas fa-phone"></i>
           <h3>Teléfono</h3>
-          <p>+507 6782-6388</p>
+          <p>---------</p>
         </div>
 
         <div className="contact-item">
           <i className="fas fa-envelope"></i>
           <h3>Correo</h3>
-          <p>contact@example.com</p>
+          <p>panamapty360@gmail.com</p>
         </div>
 
         <div className="contact-item">
@@ -31,16 +31,13 @@ const Contact = () => {
       <div className="social-media">
         <h2>Síganos</h2>
         <div className="social-icons">
-          <a href="https://weixin.qq.com" target="_blank" rel="noopener noreferrer">
-            <FaWeixin className="social-icon" />
-          </a>
-          <a href="https://weibo.com" target="_blank" rel="noopener noreferrer">
-            <FaWeibo className="social-icon" />
+          <a href="https://x.com/IIEESpty" target="_blank" rel="noopener noreferrer">
+            <FaTwitter className="social-icon" />
           </a>
           <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
             <FaInstagram className="social-icon" />
           </a>
-          <a href="https://youtube.com" target="_blank" rel="noopener noreferrer">
+          <a href="https://youtube.com/@pty360?si=yALhu8s4bGJdBrnh" target="_blank" rel="noopener noreferrer">
             <FaYoutube className="social-icon" />
           </a>
         </div>

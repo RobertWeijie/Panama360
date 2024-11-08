@@ -9,7 +9,7 @@ const blogPosts = [
     id: 1,
     title: 'Fortaleciendo las ideas manufactureras panameñas: construyendo empresas de alta precisión y liderando la innovación económica',
     summary: 'Fortalecer la idea del Hecho en Panamá e integrar en ella el concepto de empresas de alta tecnología',
-    tags: ['AI', 'Manufacturas', 'Economia'],
+    tags: ['IA', 'Manufacturas', 'Economia'],
     date: '2024-10-04'
 
   },

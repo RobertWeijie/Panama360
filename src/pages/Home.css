@@ -13,7 +13,7 @@
 }
 
 .dark .home h1 {
-  color: #fff;
+  color: #dd1212;
 }
 
 .grid {
@@ -61,7 +61,7 @@
 }
 
 .dark .card {
-  background: #2d2d2d;
+  background: #d50a0a;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
 }
 

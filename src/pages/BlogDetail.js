@@ -26,7 +26,7 @@ Contacto:robertochen0220@gmail.com
 Autor:Roberto Chen
 
     `,
-    tags: ['AI', 'Manufacturas', 'Economia'],
+    tags: ['IA', 'Manufacturas', 'Economia'],
     date: '2024-10-04'
   },
   // ... 其他文章的详细内容
